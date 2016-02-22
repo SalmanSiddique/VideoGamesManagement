@@ -1,0 +1,105 @@
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\VideoGamesMgmt.dll.config
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\VideoGamesMgmt.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\VideoGamesMgmt.pdb
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Antlr3.Runtime.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\AspNet.ScriptManager.bootstrap.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\AspNet.ScriptManager.jQuery.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\EntityFramework.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\EntityFramework.SqlServer.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.Core.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Cookies.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Facebook.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Google.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.OAuth.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Twitter.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.ScriptManager.WebForms.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Web.Infrastructure.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\MySql.Data.Entity.EF6.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Newtonsoft.Json.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Owin.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\System.Web.Optimization.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\System.Web.Providers.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\WebGrease.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\System.Web.Optimization.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Antlr3.Runtime.pdb
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Newtonsoft.Json.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\EntityFramework.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\EntityFramework.SqlServer.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.Core.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\System.Web.Providers.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Facebook.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Cookies.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Google.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Twitter.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.OAuth.xml
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\obj\Debug\VideoGamesMgmt.dll
+D:\MSC\Sem1\DB1\Project2\Code\VideoGamesMgmt\VideoGamesMgmt\obj\Debug\VideoGamesMgmt.pdb
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\VideoGamesMgmt.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\VideoGamesMgmt.pdb
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Antlr3.Runtime.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\AspNet.ScriptManager.jQuery.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\EntityFramework.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\EntityFramework.SqlServer.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Google.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Web.Infrastructure.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\MySql.Data.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\MySql.Data.Entity.EF6.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Newtonsoft.Json.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Owin.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\System.Web.Optimization.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\System.Web.Providers.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\WebGrease.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\System.Web.Optimization.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Antlr3.Runtime.pdb
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Newtonsoft.Json.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\EntityFramework.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\EntityFramework.SqlServer.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\System.Web.Providers.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Google.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\obj\Debug\VideoGamesMgmt.csprojResolveAssemblyReference.cache
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\obj\Debug\VideoGamesMgmt.dll
+C:\Old Data\MSC\Sem1\DB1\Project2\Final\Team_5_Project2_Submission\Team_5_Source\VideoGamesMgmtWebApp\VideoGamesMgmt\VideoGamesMgmt\obj\Debug\VideoGamesMgmt.pdb

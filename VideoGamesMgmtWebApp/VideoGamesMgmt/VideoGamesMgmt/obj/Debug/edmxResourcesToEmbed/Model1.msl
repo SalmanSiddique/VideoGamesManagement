@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="videogamesmgmtModel1StoreContainer" CdmEntityContainer="videogamesmgmtEntities1">
+    <EntitySetMapping Name="videogames">
+      <EntityTypeMapping TypeName="videogamesmgmtModel1.videogame">
+        <MappingFragment StoreEntitySet="videogames">
+          <ScalarProperty Name="Game_ID" ColumnName="Game_ID" />
+          <ScalarProperty Name="Game_Name" ColumnName="Game_Name" />
+          <ScalarProperty Name="Game_Desc" ColumnName="Game_Desc" />
+          <ScalarProperty Name="Game_Title" ColumnName="Game_Title" />
+          <ScalarProperty Name="Game_Category_ID" ColumnName="Game_Category_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="videogamesconsoles">
+      <EntityTypeMapping TypeName="videogamesmgmtModel1.videogamesconsole">
+        <MappingFragment StoreEntitySet="videogamesconsoles">
+          <ScalarProperty Name="VGCon_ID" ColumnName="VGCon_ID" />
+          <ScalarProperty Name="VGCon_Game_ID" ColumnName="VGCon_Game_ID" />
+          <ScalarProperty Name="VGCon_Console_ID" ColumnName="VGCon_Console_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

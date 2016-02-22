@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="videogamesmgmtModelStoreContainer" CdmEntityContainer="videogamesmgmtEntities">
+    <EntitySetMapping Name="categoriesmasters">
+      <EntityTypeMapping TypeName="videogamesmgmtModel.categoriesmaster">
+        <MappingFragment StoreEntitySet="categoriesmaster">
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conditionsmasters">
+      <EntityTypeMapping TypeName="videogamesmgmtModel.conditionsmaster">
+        <MappingFragment StoreEntitySet="conditionsmaster">
+          <ScalarProperty Name="Condition_Name" ColumnName="Condition_Name" />
+          <ScalarProperty Name="Condition_ID" ColumnName="Condition_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="consoles">
+      <EntityTypeMapping TypeName="videogamesmgmtModel.console">
+        <MappingFragment StoreEntitySet="consoles">
+          <ScalarProperty Name="Console_Type" ColumnName="Console_Type" />
+          <ScalarProperty Name="Console_Name" ColumnName="Console_Name" />
+          <ScalarProperty Name="Console_ID" ColumnName="Console_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gamecomletenesses">
+      <EntityTypeMapping TypeName="videogamesmgmtModel.gamecomleteness">
+        <MappingFragment StoreEntitySet="gamecomleteness">
+          <ScalarProperty Name="Completeness_Description" ColumnName="Completeness_Description" />
+          <ScalarProperty Name="Completeness_Name" ColumnName="Completeness_Name" />
+          <ScalarProperty Name="Completeness_ID" ColumnName="Completeness_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gamecontents">
+      <EntityTypeMapping TypeName="videogamesmgmtModel.gamecontent">
+        <MappingFragment StoreEntitySet="gamecontents">
+          <ScalarProperty Name="GC_DatePurchased" ColumnName="GC_DatePurchased" />
+          <ScalarProperty Name="GC_Condition_ID" ColumnName="GC_Condition_ID" />
+          <ScalarProperty Name="GC_CurMarketValue" ColumnName="GC_CurMarketValue" />
+          <ScalarProperty Name="GC_AmtPurchased" ColumnName="GC_AmtPurchased" />
+          <ScalarProperty Name="GC_Completeness_ID" ColumnName="GC_Completeness_ID" />
+          <ScalarProperty Name="GC_VGCon_ID" ColumnName="GC_VGCon_ID" />
+          <ScalarProperty Name="GC_ID" ColumnName="GC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="videogamescategories">
+      <EntityTypeMapping TypeName="videogamesmgmtModel.videogamescategory">
+        <MappingFragment StoreEntitySet="videogamescategories">
+          <ScalarProperty Name="VGCat_Category_ID" ColumnName="VGCat_Category_ID" />
+          <ScalarProperty Name="VGCat_Game_ID" ColumnName="VGCat_Game_ID" />
+          <ScalarProperty Name="VGCat_ID" ColumnName="VGCat_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="videogamesconsoles">
+      <EntityTypeMapping TypeName="videogamesmgmtModel.videogamesconsole">
+        <MappingFragment StoreEntitySet="videogamesconsoles">
+          <ScalarProperty Name="VGCon_Console_ID" ColumnName="VGCon_Console_ID" />
+          <ScalarProperty Name="VGCon_Game_ID" ColumnName="VGCon_Game_ID" />
+          <ScalarProperty Name="VGCon_ID" ColumnName="VGCon_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="videogames">
+      <EntityTypeMapping TypeName="videogamesmgmtModel.videogame">
+        <MappingFragment StoreEntitySet="videogames">
+          <ScalarProperty Name="Game_Title" ColumnName="Game_Title" />
+          <ScalarProperty Name="Game_Desc" ColumnName="Game_Desc" />
+          <ScalarProperty Name="Game_Name" ColumnName="Game_Name" />
+          <ScalarProperty Name="Game_ID" ColumnName="Game_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

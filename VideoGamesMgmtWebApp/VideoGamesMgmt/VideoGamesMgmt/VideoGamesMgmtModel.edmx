@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="videogamesmgmtModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="categoriesmaster">
+          <Key>
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Name="Category_ID" Type="int" Nullable="false" />
+          <Property Name="Category_Name" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="conditionsmaster">
+          <Key>
+            <PropertyRef Name="Condition_ID" />
+          </Key>
+          <Property Name="Condition_ID" Type="int" Nullable="false" />
+          <Property Name="Condition_Name" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="consoles">
+          <Key>
+            <PropertyRef Name="Console_ID" />
+          </Key>
+          <Property Name="Console_ID" Type="int" Nullable="false" />
+          <Property Name="Console_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Console_Type" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="gamecomleteness">
+          <Key>
+            <PropertyRef Name="Completeness_ID" />
+          </Key>
+          <Property Name="Completeness_ID" Type="int" Nullable="false" />
+          <Property Name="Completeness_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Completeness_Description" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="gamecontents">
+          <Key>
+            <PropertyRef Name="GC_ID" />
+          </Key>
+          <Property Name="GC_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GC_VGCon_ID" Type="int" />
+          <Property Name="GC_Completeness_ID" Type="int" />
+          <Property Name="GC_AmtPurchased" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="GC_CurMarketValue" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="GC_Condition_ID" Type="int" />
+          <Property Name="GC_DatePurchased" Type="date" />
+        </EntityType>
+        <EntityType Name="videogames">
+          <Key>
+            <PropertyRef Name="Game_ID" />
+          </Key>
+          <Property Name="Game_ID" Type="int" Nullable="false" />
+          <Property Name="Game_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Game_Desc" Type="varchar" MaxLength="500" />
+          <Property Name="Game_Title" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="videogamescategories">
+          <Key>
+            <PropertyRef Name="VGCat_ID" />
+          </Key>
+          <Property Name="VGCat_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VGCat_Game_ID" Type="int" />
+          <Property Name="VGCat_Category_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="videogamesconsoles">
+          <Key>
+            <PropertyRef Name="VGCon_ID" />
+          </Key>
+          <Property Name="VGCon_ID" Type="int" Nullable="false" />
+          <Property Name="VGCon_Game_ID" Type="int" />
+          <Property Name="VGCon_Console_ID" Type="int" />
+        </EntityType>
+        <Association Name="GC_Completeness_ID">
+          <End Role="gamecomleteness" Type="Self.gamecomleteness" Multiplicity="0..1" />
+          <End Role="gamecontents" Type="Self.gamecontents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="gamecomleteness">
+              <PropertyRef Name="Completeness_ID" />
+            </Principal>
+            <Dependent Role="gamecontents">
+              <PropertyRef Name="GC_Completeness_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GC_Condition_ID">
+          <End Role="conditionsmaster" Type="Self.conditionsmaster" Multiplicity="0..1" />
+          <End Role="gamecontents" Type="Self.gamecontents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="conditionsmaster">
+              <PropertyRef Name="Condition_ID" />
+            </Principal>
+            <Dependent Role="gamecontents">
+              <PropertyRef Name="GC_Condition_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GC_VGCon_ID">
+          <End Role="videogamesconsoles" Type="Self.videogamesconsoles" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="gamecontents" Type="Self.gamecontents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="videogamesconsoles">
+              <PropertyRef Name="VGCon_ID" />
+            </Principal>
+            <Dependent Role="gamecontents">
+              <PropertyRef Name="GC_VGCon_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="VGCat_Category_ID">
+          <End Role="categoriesmaster" Type="Self.categoriesmaster" Multiplicity="0..1" />
+          <End Role="videogamescategories" Type="Self.videogamescategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoriesmaster">
+              <PropertyRef Name="Category_ID" />
+            </Principal>
+            <Dependent Role="videogamescategories">
+              <PropertyRef Name="VGCat_Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="VGCat_Game_ID">
+          <End Role="videogames" Type="Self.videogames" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="videogamescategories" Type="Self.videogamescategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="videogames">
+              <PropertyRef Name="Game_ID" />
+            </Principal>
+            <Dependent Role="videogamescategories">
+              <PropertyRef Name="VGCat_Game_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="VGCon_Console_ID">
+          <End Role="consoles" Type="Self.consoles" Multiplicity="0..1" />
+          <End Role="videogamesconsoles" Type="Self.videogamesconsoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="consoles">
+              <PropertyRef Name="Console_ID" />
+            </Principal>
+            <Dependent Role="videogamesconsoles">
+              <PropertyRef Name="VGCon_Console_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="videogamesmgmtModelStoreContainer">
+          <EntitySet Name="categoriesmaster" EntityType="Self.categoriesmaster" Schema="videogamesmgmt" store:Type="Tables" />
+          <EntitySet Name="conditionsmaster" EntityType="Self.conditionsmaster" Schema="videogamesmgmt" store:Type="Tables" />
+          <EntitySet Name="consoles" EntityType="Self.consoles" Schema="videogamesmgmt" store:Type="Tables" />
+          <EntitySet Name="gamecomleteness" EntityType="Self.gamecomleteness" Schema="videogamesmgmt" store:Type="Tables" />
+          <EntitySet Name="gamecontents" EntityType="Self.gamecontents" Schema="videogamesmgmt" store:Type="Tables" />
+          <EntitySet Name="videogames" EntityType="Self.videogames" Schema="videogamesmgmt" store:Type="Tables" />
+          <EntitySet Name="videogamescategories" EntityType="Self.videogamescategories" Schema="videogamesmgmt" store:Type="Tables" />
+          <EntitySet Name="videogamesconsoles" EntityType="Self.videogamesconsoles" Schema="videogamesmgmt" store:Type="Tables" />
+          <AssociationSet Name="GC_Completeness_ID" Association="Self.GC_Completeness_ID">
+            <End Role="gamecomleteness" EntitySet="gamecomleteness" />
+            <End Role="gamecontents" EntitySet="gamecontents" />
+          </AssociationSet>
+          <AssociationSet Name="GC_Condition_ID" Association="Self.GC_Condition_ID">
+            <End Role="conditionsmaster" EntitySet="conditionsmaster" />
+            <End Role="gamecontents" EntitySet="gamecontents" />
+          </AssociationSet>
+          <AssociationSet Name="GC_VGCon_ID" Association="Self.GC_VGCon_ID">
+            <End Role="videogamesconsoles" EntitySet="videogamesconsoles" />
+            <End Role="gamecontents" EntitySet="gamecontents" />
+          </AssociationSet>
+          <AssociationSet Name="VGCat_Category_ID" Association="Self.VGCat_Category_ID">
+            <End Role="categoriesmaster" EntitySet="categoriesmaster" />
+            <End Role="videogamescategories" EntitySet="videogamescategories" />
+          </AssociationSet>
+          <AssociationSet Name="VGCat_Game_ID" Association="Self.VGCat_Game_ID">
+            <End Role="videogames" EntitySet="videogames" />
+            <End Role="videogamescategories" EntitySet="videogamescategories" />
+          </AssociationSet>
+          <AssociationSet Name="VGCon_Console_ID" Association="Self.VGCon_Console_ID">
+            <End Role="consoles" EntitySet="consoles" />
+            <End Role="videogamesconsoles" EntitySet="videogamesconsoles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="videogamesmgmtModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="videogamesmgmtEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="categoriesmasters" EntityType="videogamesmgmtModel.categoriesmaster" />
+          <EntitySet Name="conditionsmasters" EntityType="videogamesmgmtModel.conditionsmaster" />
+          <EntitySet Name="consoles" EntityType="videogamesmgmtModel.console" />
+          <EntitySet Name="gamecomletenesses" EntityType="videogamesmgmtModel.gamecomleteness" />
+          <EntitySet Name="gamecontents" EntityType="videogamesmgmtModel.gamecontent" />
+          <EntitySet Name="videogamescategories" EntityType="videogamesmgmtModel.videogamescategory" />
+          <AssociationSet Name="VGCat_Category_ID" Association="videogamesmgmtModel.VGCat_Category_ID">
+            <End Role="categoriesmaster" EntitySet="categoriesmasters" />
+            <End Role="videogamescategory" EntitySet="videogamescategories" />
+          </AssociationSet>
+          <AssociationSet Name="GC_Condition_ID" Association="videogamesmgmtModel.GC_Condition_ID">
+            <End Role="conditionsmaster" EntitySet="conditionsmasters" />
+            <End Role="gamecontent" EntitySet="gamecontents" />
+          </AssociationSet>
+          <AssociationSet Name="GC_Completeness_ID" Association="videogamesmgmtModel.GC_Completeness_ID">
+            <End Role="gamecomleteness" EntitySet="gamecomletenesses" />
+            <End Role="gamecontent" EntitySet="gamecontents" />
+          </AssociationSet>
+          <EntitySet Name="videogamesconsoles" EntityType="videogamesmgmtModel.videogamesconsole" />
+          <AssociationSet Name="VGCon_Console_ID" Association="videogamesmgmtModel.VGCon_Console_ID">
+            <End Role="console" EntitySet="consoles" />
+            <End Role="videogamesconsole" EntitySet="videogamesconsoles" />
+          </AssociationSet>
+          <AssociationSet Name="GC_VGCon_ID" Association="videogamesmgmtModel.GC_VGCon_ID">
+            <End Role="videogamesconsole" EntitySet="videogamesconsoles" />
+            <End Role="gamecontent" EntitySet="gamecontents" />
+          </AssociationSet>
+          <EntitySet Name="videogames" EntityType="videogamesmgmtModel.videogame" />
+          <AssociationSet Name="VGCat_Game_ID" Association="videogamesmgmtModel.VGCat_Game_ID">
+            <End Role="videogame" EntitySet="videogames" />
+            <End Role="videogamescategory" EntitySet="videogamescategories" />
+          </AssociationSet>
+          <AssociationSet Name="videogamevideogamesconsole" Association="videogamesmgmtModel.videogamevideogamesconsole">
+            <End Role="videogame" EntitySet="videogames" />
+            <End Role="videogamesconsole" EntitySet="videogamesconsoles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="categoriesmaster">
+          <Key>
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Name="Category_ID" Type="Int32" Nullable="false" />
+          <Property Name="Category_Name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="videogamescategories" Relationship="videogamesmgmtModel.VGCat_Category_ID" FromRole="categoriesmaster" ToRole="videogamescategory" />
+        </EntityType>
+        <EntityType Name="conditionsmaster">
+          <Key>
+            <PropertyRef Name="Condition_ID" />
+          </Key>
+          <Property Name="Condition_ID" Type="Int32" Nullable="false" />
+          <Property Name="Condition_Name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="gamecontents" Relationship="videogamesmgmtModel.GC_Condition_ID" FromRole="conditionsmaster" ToRole="gamecontent" />
+        </EntityType>
+        <EntityType Name="console">
+          <Key>
+            <PropertyRef Name="Console_ID" />
+          </Key>
+          <Property Name="Console_ID" Type="Int32" Nullable="false" />
+          <Property Name="Console_Name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Console_Type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="videogamesconsoles" Relationship="videogamesmgmtModel.VGCon_Console_ID" FromRole="console" ToRole="videogamesconsole" />
+        </EntityType>
+        <EntityType Name="gamecomleteness">
+          <Key>
+            <PropertyRef Name="Completeness_ID" />
+          </Key>
+          <Property Name="Completeness_ID" Type="Int32" Nullable="false" />
+          <Property Name="Completeness_Name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Completeness_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="gamecontents" Relationship="videogamesmgmtModel.GC_Completeness_ID" FromRole="gamecomleteness" ToRole="gamecontent" />
+        </EntityType>
+        <EntityType Name="gamecontent">
+          <Key>
+            <PropertyRef Name="GC_ID" />
+          </Key>
+          <Property Name="GC_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GC_VGCon_ID" Type="Int32" />
+          <Property Name="GC_Completeness_ID" Type="Int32" />
+          <Property Name="GC_AmtPurchased" Type="Decimal" />
+          <Property Name="GC_CurMarketValue" Type="Decimal" />
+          <Property Name="GC_Condition_ID" Type="Int32" />
+          <Property Name="GC_DatePurchased" Type="DateTime" />
+          <NavigationProperty Name="conditionsmaster" Relationship="videogamesmgmtModel.GC_Condition_ID" FromRole="gamecontent" ToRole="conditionsmaster" />
+          <NavigationProperty Name="gamecomleteness" Relationship="videogamesmgmtModel.GC_Completeness_ID" FromRole="gamecontent" ToRole="gamecomleteness" />
+          <NavigationProperty Name="videogamesconsole" Relationship="videogamesmgmtModel.GC_VGCon_ID" FromRole="gamecontent" ToRole="videogamesconsole" />
+        </EntityType>
+        <EntityType Name="videogamescategory">
+          <Key>
+            <PropertyRef Name="VGCat_ID" />
+          </Key>
+          <Property Name="VGCat_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VGCat_Game_ID" Type="Int32" />
+          <Property Name="VGCat_Category_ID" Type="Int32" />
+          <NavigationProperty Name="categoriesmaster" Relationship="videogamesmgmtModel.VGCat_Category_ID" FromRole="videogamescategory" ToRole="categoriesmaster" />
+          <NavigationProperty Name="videogame" Relationship="videogamesmgmtModel.VGCat_Game_ID" FromRole="videogamescategory" ToRole="videogame" />
+        </EntityType>
+        <Association Name="VGCat_Category_ID">
+          <End Type="videogamesmgmtModel.categoriesmaster" Role="categoriesmaster" Multiplicity="0..1" />
+          <End Type="videogamesmgmtModel.videogamescategory" Role="videogamescategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoriesmaster">
+              <PropertyRef Name="Category_ID" />
+            </Principal>
+            <Dependent Role="videogamescategory">
+              <PropertyRef Name="VGCat_Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GC_Condition_ID">
+          <End Type="videogamesmgmtModel.conditionsmaster" Role="conditionsmaster" Multiplicity="0..1" />
+          <End Type="videogamesmgmtModel.gamecontent" Role="gamecontent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="conditionsmaster">
+              <PropertyRef Name="Condition_ID" />
+            </Principal>
+            <Dependent Role="gamecontent">
+              <PropertyRef Name="GC_Condition_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GC_Completeness_ID">
+          <End Type="videogamesmgmtModel.gamecomleteness" Role="gamecomleteness" Multiplicity="0..1" />
+          <End Type="videogamesmgmtModel.gamecontent" Role="gamecontent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="gamecomleteness">
+              <PropertyRef Name="Completeness_ID" />
+            </Principal>
+            <Dependent Role="gamecontent">
+              <PropertyRef Name="GC_Completeness_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="videogamesconsole">
+          <Key>
+            <PropertyRef Name="VGCon_ID" />
+          </Key>
+          <Property Name="VGCon_ID" Type="Int32" Nullable="false" />
+          <Property Name="VGCon_Game_ID" Type="Int32" />
+          <Property Name="VGCon_Console_ID" Type="Int32" />
+          <NavigationProperty Name="console" Relationship="videogamesmgmtModel.VGCon_Console_ID" FromRole="videogamesconsole" ToRole="console" />
+          <NavigationProperty Name="gamecontents" Relationship="videogamesmgmtModel.GC_VGCon_ID" FromRole="videogamesconsole" ToRole="gamecontent" />
+          <NavigationProperty Name="videogame" Relationship="videogamesmgmtModel.videogamevideogamesconsole" FromRole="videogamesconsole" ToRole="videogame" />
+        </EntityType>
+        <Association Name="VGCon_Console_ID">
+          <End Type="videogamesmgmtModel.console" Role="console" Multiplicity="0..1" />
+          <End Type="videogamesmgmtModel.videogamesconsole" Role="videogamesconsole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="console">
+              <PropertyRef Name="Console_ID" />
+            </Principal>
+            <Dependent Role="videogamesconsole">
+              <PropertyRef Name="VGCon_Console_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GC_VGCon_ID">
+          <End Type="videogamesmgmtModel.videogamesconsole" Role="videogamesconsole" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="videogamesmgmtModel.gamecontent" Role="gamecontent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="videogamesconsole">
+              <PropertyRef Name="VGCon_ID" />
+            </Principal>
+            <Dependent Role="gamecontent">
+              <PropertyRef Name="GC_VGCon_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="videogame">
+          <Key>
+            <PropertyRef Name="Game_ID" />
+          </Key>
+          <Property Name="Game_ID" Type="Int32" Nullable="false" />
+          <Property Name="Game_Name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Game_Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Game_Title" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="videogamescategories" Relationship="videogamesmgmtModel.VGCat_Game_ID" FromRole="videogame" ToRole="videogamescategory" />
+          <NavigationProperty Name="videogamesconsoles" Relationship="videogamesmgmtModel.videogamevideogamesconsole" FromRole="videogame" ToRole="videogamesconsole" />
+        </EntityType>
+        <Association Name="VGCat_Game_ID">
+          <End Type="videogamesmgmtModel.videogame" Role="videogame" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="videogamesmgmtModel.videogamescategory" Role="videogamescategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="videogame">
+              <PropertyRef Name="Game_ID" />
+            </Principal>
+            <Dependent Role="videogamescategory">
+              <PropertyRef Name="VGCat_Game_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="videogamevideogamesconsole">
+          <End Type="videogamesmgmtModel.videogame" Role="videogame" Multiplicity="0..1" />
+          <End Type="videogamesmgmtModel.videogamesconsole" Role="videogamesconsole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="videogame">
+              <PropertyRef Name="Game_ID" />
+            </Principal>
+            <Dependent Role="videogamesconsole">
+              <PropertyRef Name="VGCon_Game_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="videogamesmgmtModelStoreContainer" CdmEntityContainer="videogamesmgmtEntities">
+          <EntitySetMapping Name="categoriesmasters">
+            <EntityTypeMapping TypeName="videogamesmgmtModel.categoriesmaster">
+              <MappingFragment StoreEntitySet="categoriesmaster">
+                <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+                <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="conditionsmasters">
+            <EntityTypeMapping TypeName="videogamesmgmtModel.conditionsmaster">
+              <MappingFragment StoreEntitySet="conditionsmaster">
+                <ScalarProperty Name="Condition_Name" ColumnName="Condition_Name" />
+                <ScalarProperty Name="Condition_ID" ColumnName="Condition_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consoles">
+            <EntityTypeMapping TypeName="videogamesmgmtModel.console">
+              <MappingFragment StoreEntitySet="consoles">
+                <ScalarProperty Name="Console_Type" ColumnName="Console_Type" />
+                <ScalarProperty Name="Console_Name" ColumnName="Console_Name" />
+                <ScalarProperty Name="Console_ID" ColumnName="Console_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="gamecomletenesses">
+            <EntityTypeMapping TypeName="videogamesmgmtModel.gamecomleteness">
+              <MappingFragment StoreEntitySet="gamecomleteness">
+                <ScalarProperty Name="Completeness_Description" ColumnName="Completeness_Description" />
+                <ScalarProperty Name="Completeness_Name" ColumnName="Completeness_Name" />
+                <ScalarProperty Name="Completeness_ID" ColumnName="Completeness_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="gamecontents">
+            <EntityTypeMapping TypeName="videogamesmgmtModel.gamecontent">
+              <MappingFragment StoreEntitySet="gamecontents">
+                <ScalarProperty Name="GC_DatePurchased" ColumnName="GC_DatePurchased" />
+                <ScalarProperty Name="GC_Condition_ID" ColumnName="GC_Condition_ID" />
+                <ScalarProperty Name="GC_CurMarketValue" ColumnName="GC_CurMarketValue" />
+                <ScalarProperty Name="GC_AmtPurchased" ColumnName="GC_AmtPurchased" />
+                <ScalarProperty Name="GC_Completeness_ID" ColumnName="GC_Completeness_ID" />
+                <ScalarProperty Name="GC_VGCon_ID" ColumnName="GC_VGCon_ID" />
+                <ScalarProperty Name="GC_ID" ColumnName="GC_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="videogamescategories">
+            <EntityTypeMapping TypeName="videogamesmgmtModel.videogamescategory">
+              <MappingFragment StoreEntitySet="videogamescategories">
+                <ScalarProperty Name="VGCat_Category_ID" ColumnName="VGCat_Category_ID" />
+                <ScalarProperty Name="VGCat_Game_ID" ColumnName="VGCat_Game_ID" />
+                <ScalarProperty Name="VGCat_ID" ColumnName="VGCat_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="videogamesconsoles">
+            <EntityTypeMapping TypeName="videogamesmgmtModel.videogamesconsole">
+              <MappingFragment StoreEntitySet="videogamesconsoles">
+                <ScalarProperty Name="VGCon_Console_ID" ColumnName="VGCon_Console_ID" />
+                <ScalarProperty Name="VGCon_Game_ID" ColumnName="VGCon_Game_ID" />
+                <ScalarProperty Name="VGCon_ID" ColumnName="VGCon_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="videogames">
+            <EntityTypeMapping TypeName="videogamesmgmtModel.videogame">
+              <MappingFragment StoreEntitySet="videogames">
+                <ScalarProperty Name="Game_Title" ColumnName="Game_Title" />
+                <ScalarProperty Name="Game_Desc" ColumnName="Game_Desc" />
+                <ScalarProperty Name="Game_Name" ColumnName="Game_Name" />
+                <ScalarProperty Name="Game_ID" ColumnName="Game_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

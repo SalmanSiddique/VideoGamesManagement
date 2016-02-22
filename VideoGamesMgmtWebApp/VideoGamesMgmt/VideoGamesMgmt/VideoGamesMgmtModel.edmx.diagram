@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0a26e96b4a5949348923f4a63d9f9646" Name="Diagram1">
+        <EntityTypeShape EntityType="videogamesmgmtModel.categoriesmaster" Width="1.5" PointX="1.5" PointY="3.125" />
+        <EntityTypeShape EntityType="videogamesmgmtModel.conditionsmaster" Width="1.5" PointX="8.875" PointY="0.5" />
+        <EntityTypeShape EntityType="videogamesmgmtModel.console" Width="1.5" PointX="1.25" PointY="5.375" />
+        <EntityTypeShape EntityType="videogamesmgmtModel.gamecomleteness" Width="1.5" PointX="6.875" PointY="5.875" />
+        <EntityTypeShape EntityType="videogamesmgmtModel.gamecontent" Width="1.5" PointX="8.875" PointY="2.75" />
+        <EntityTypeShape EntityType="videogamesmgmtModel.videogamescategory" Width="1.5" PointX="1.625" PointY="0.5" />
+        <AssociationConnector Association="videogamesmgmtModel.VGCat_Category_ID" />
+        <AssociationConnector Association="videogamesmgmtModel.GC_Condition_ID" />
+        <AssociationConnector Association="videogamesmgmtModel.GC_Completeness_ID" />
+        <EntityTypeShape EntityType="videogamesmgmtModel.videogamesconsole" Width="1.5" PointX="5.125" PointY="3.5" />
+        <AssociationConnector Association="videogamesmgmtModel.VGCon_Console_ID" />
+        <AssociationConnector Association="videogamesmgmtModel.GC_VGCon_ID" />
+        <EntityTypeShape EntityType="videogamesmgmtModel.videogame" Width="1.5" PointX="5.125" PointY="0.5" />
+        <AssociationConnector Association="videogamesmgmtModel.VGCat_Game_ID" />
+        <AssociationConnector Association="videogamesmgmtModel.videogamevideogamesconsole" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

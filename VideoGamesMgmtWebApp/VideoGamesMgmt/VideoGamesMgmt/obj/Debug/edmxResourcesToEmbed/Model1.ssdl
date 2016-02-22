@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="videogamesmgmtModel1.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="videogames">
+    <Key>
+      <PropertyRef Name="Game_ID" />
+    </Key>
+    <Property Name="Game_ID" Type="int" Nullable="false" />
+    <Property Name="Game_Name" Type="varchar" MaxLength="45" />
+    <Property Name="Game_Desc" Type="varchar" MaxLength="500" />
+    <Property Name="Game_Title" Type="varchar" MaxLength="45" />
+    <Property Name="Game_Category_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="videogamesconsoles">
+    <Key>
+      <PropertyRef Name="VGCon_ID" />
+    </Key>
+    <Property Name="VGCon_ID" Type="int" Nullable="false" />
+    <Property Name="VGCon_Game_ID" Type="int" />
+    <Property Name="VGCon_Console_ID" Type="int" />
+  </EntityType>
+  <EntityContainer Name="videogamesmgmtModel1StoreContainer">
+    <EntitySet Name="videogames" EntityType="Self.videogames" Schema="videogamesmgmt" store:Type="Tables" />
+    <EntitySet Name="videogamesconsoles" EntityType="Self.videogamesconsoles" Schema="videogamesmgmt" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
